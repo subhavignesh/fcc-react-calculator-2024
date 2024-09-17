@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: white;
+  width: 100dvw;
+  overflow-x: hidden;
+  height: 100%;
+  background: #000;
+  border-color: #3b3b3b;
+  user-select: none;
+}
+
+canvas {
+  touch-action: none;
+}
+
+.screen-max-width {
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+  position: relative;
+  max-width: 1120px;
+}
+
+@layer utilities {
+  .flex-center {
+    @apply flex items-center justify-center
+  }
+  .btn-lg{
+    @apply w-[10vw] h-[10vh] bg-red font-semibold border-[2px] border-gray-100 shadow-lg transition duration-150 ease-in-out;
+  }
+  .btn-long{
+    @apply w-[5vw] h-[20vh] bg-red font-semibold border-[2px] border-gray-100 shadow-lg transition duration-150 ease-in-out;
+  }
+
+
+  .btn{
+    @apply w-[5vw] h-[10vh] bg-gray font-semibold border-[2px] border-gray-100 shadow-lg transition duration-150 ease-in-out;
+  }
+
+  .btn:hover, .btn-lg:hover, .btn-long:hover{
+    @apply bg-blue
+  }
+
+
+  .flex-col-center{
+    @apply flex-col items-center justify-center
+  }
+
+  .display-board{
+    @apply w-[100%] h-[10%] bg-black
+  }
+
+  
+
+}
